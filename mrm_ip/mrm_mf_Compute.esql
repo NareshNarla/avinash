@@ -1,0 +1,12 @@
+
+
+CREATE COMPUTE MODULE mrm_mf_Compute
+	CREATE FUNCTION Main() RETURNS BOOLEAN
+	BEGIN
+		SET OutputRoot.XMLNSC.Invoicedetails.num = InputRoot.MRM.invoicerecords.id;
+		SET OutputRoot.XMLNSC.Invoicedetails.NAME = InputRoot.MRM.invoicerecords.name;
+		SET OutputRoot.XMLNSC.Invoicedetails.price = InputRoot.MRM.invoicerecords.cost;
+		SET OutputRoot.XMLNSC.Invoicedetails.EMPTY = InputRoot.MRM.invoicerecords.empty;
+		RETURN TRUE;
+	END;
+END MODULE;

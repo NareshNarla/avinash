@@ -1,0 +1,10 @@
+
+
+CREATE COMPUTE MODULE mrm_mf_Compute1
+	CREATE FUNCTION Main() RETURNS BOOLEAN
+	BEGIN
+		
+		SET OutputRoot.XMLNSC.acknowldge = 'success';
+		RETURN TRUE;
+	END;
+END MODULE;
